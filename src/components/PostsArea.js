@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import PostMeta from './PostMeta';
+import PostMeta from './PostMeta/PostMeta';
 
 function PostsArea() {
     const [posts, setPosts] = useState([])

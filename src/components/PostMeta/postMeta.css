@@ -1,0 +1,43 @@
+.post {
+  max-width: 345px;
+  margin: 50px auto;
+}
+.publisherName {
+}
+.profileHeader {
+  cursor: pointer;
+}
+.publishDate {
+}
+.postImg {
+  padding-top: 56.25%;
+  cursor: pointer;
+}
+.postText {
+}
+.likes {
+}
+.tagsList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+}
+.tag {
+  cursor: pointer !important;
+}
+.tagsArea {
+  text-align: start;
+  padding-top: 20px;
+}
+
+.liked {
+  color: #f75590;
+}
+.shared {
+  color: #04ddf1;
+}
+.commented {
+  color: #7eca9c;
+}
