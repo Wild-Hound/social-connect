@@ -1,4 +1,5 @@
 
+
 export function likePost(e,likeCount,func){
     let x;
     e.target.classList.toggle("liked") ? x = likeCount + 1 : x = likeCount - 1
@@ -14,7 +15,4 @@ export function commentPost(e){
 }
 export function singlePost(e){
     console.log("single post action will be implemented here singlePost")
-}
-export function profileClick(e){
-    console.log("Profile clicked action will be implemented here profileClick")
 }
