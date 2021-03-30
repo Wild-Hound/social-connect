@@ -8,22 +8,29 @@ import {
 } from "react-router-dom";
 import UserProfile from './components/UserProfile/UserProfile';
 import NoMatch from './components/NoMatch/NoMatch';
+import AppBarEx from './components/AppBar/AppBarEx';
+import TagPosts from './components/TagPostsArea/TagPosts';
+
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Switch>
-          <Route exact path="/">
-            <PostsArea></PostsArea>
-          </Route>
-          <Route path="/profile/:id">
-            <UserProfile></UserProfile>
-          </Route>
-          <Route>
-            <NoMatch/>
-          </Route>
-        </Switch>
+        <AppBarEx></AppBarEx>
+          <Switch>
+            <Route exact path="/">
+              <PostsArea></PostsArea>
+            </Route>
+            <Route path="/profile/:id">
+              <UserProfile></UserProfile>
+            </Route>
+            <Route path="/tag/:id">
+              <TagPosts></TagPosts>
+            </Route>
+            <Route>
+              <NoMatch/>
+            </Route>
+          </Switch>
       </div>
     </Router>
   );

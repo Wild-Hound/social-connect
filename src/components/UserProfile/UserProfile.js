@@ -45,6 +45,7 @@ function UserProfile() {
 
 
     return (
+        <>
         <div className="profileArea">
         <div className="profileMeta">
             <img src={userData?.picture} className="profileImg"></img>
@@ -60,6 +61,7 @@ function UserProfile() {
             })}
         </div>
         </div>
+        </>
     )
 }
 

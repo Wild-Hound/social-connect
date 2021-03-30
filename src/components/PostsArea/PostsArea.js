@@ -18,7 +18,7 @@ function PostsArea() {
     },[])
 
     return (
-        <div>
+        <div className='pt20'>
             {posts?.map((post) =>{
                 return(
                     <PostMeta post={post} key={post.id}></PostMeta>

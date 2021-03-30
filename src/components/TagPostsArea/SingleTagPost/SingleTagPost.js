@@ -1,5 +1,4 @@
-import React, {useState,useEffect} from 'react'
-import "./postMeta.css"
+import React from 'react'
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -11,20 +10,12 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import CommentIcon from '@material-ui/icons/Comment';
-import { commentPost, likePost, sharePost, singlePost } from './PostMetaMech';
-import Tag from './tags/Tag';
+import Tag from '../../PostsArea/PostMeta/tags/Tag';
 import { useHistory } from "react-router-dom";
 
+function SingleTagPost({owner,publishDate,image,text,tags,likes}) {
 
-function PostMeta(props) {
-  
-    const {id,image,likes,owner,publishDate,tags,text} = props.post
-    const [likeCount, setLikeCount] = useState(0)
     const history = useHistory();
-
-    useEffect(() => {
-        setLikeCount(likes)
-    }, [])
 
     function userProfile(e,profile){
         history.push(`/profile/${profile}`)
@@ -34,8 +25,7 @@ function PostMeta(props) {
         <Card className="post">
                 <CardHeader
                     avatar={
-                    <Avatar src={owner.picture}>
-                    </Avatar>
+                    <Avatar src={owner.picture}/>
                     }
                     title={`${owner.firstName} ${owner.lastName}`}
                     subheader={publishDate}
@@ -45,25 +35,24 @@ function PostMeta(props) {
             <CardMedia
                 className="postImg"
                 image={image}
-                onClick={(event) => singlePost(event)}
             />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
                 {text}
                 </Typography>
-                <div className="tagsArea">
+                <div className="USPostTags">
                   {tags?.map((tg) => <Tag tag={tg} key={tg}></Tag>)}
                 </div>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites" onClick={(event) => likePost(event,likeCount,setLikeCount)}>
+                <IconButton aria-label="add to favorites" > 
                 <FavoriteIcon className="like" />
-                {likeCount}
+                {likes}
                 </IconButton>
-                <IconButton aria-label="share" onClick={(event) => sharePost(event)}>
+                <IconButton aria-label="share" >
                 <ShareIcon />
                 </IconButton>
-                <IconButton aria-label="comment" onClick={(event) => commentPost(event)}>
+                <IconButton aria-label="comment">
                 <CommentIcon />
                 </IconButton>
             </CardActions>
@@ -71,23 +60,4 @@ function PostMeta(props) {
     )
 }
 
-export default PostMeta
-
-
-{/* <div>
-            <div>
-                <p className="publisherName">Published by: {owner.firstName} {owner.lastName}</p>
-                <p className="publishDate">At: {publishDate}</p>
-                </div>
-            <img src={image} className="postImg"/>
-            <h4 className="postText">{text}</h4>
-            <ul className="tagsList">
-                <li>Tags:</li>
-                {tags?.map((tag) =>{
-                    return(
-                        <li className="tag">{tag},</li>
-                    )
-                })}
-            </ul>
-            <p className="likes">Likes: {likes}</p>
-        </div> */}
+export default SingleTagPost

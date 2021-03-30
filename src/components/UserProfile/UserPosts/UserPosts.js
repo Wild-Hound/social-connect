@@ -10,9 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import CommentIcon from '@material-ui/icons/Comment';
-import { Link } from "react-router-dom";
 import Tag from '../../PostsArea/PostMeta/tags/Tag';
-import {likePost} from '../../PostsArea/PostMeta/PostMetaMech'
 
 function UserPosts({id,likes,text,tags,image,owner,publishDate}) {
     return (

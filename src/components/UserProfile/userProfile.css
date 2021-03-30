@@ -4,6 +4,7 @@
 .profileMeta {
   position: fixed;
   left: 20px;
+  top: 85px;
   background: aliceblue;
   padding: 25px;
   border-radius: 15px;
