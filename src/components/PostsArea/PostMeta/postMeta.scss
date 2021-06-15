@@ -1,6 +1,10 @@
+@import '../../Mixins/breakpoints.scss';
 .post {
-  max-width: 345px;
+  max-width: 545px;
   margin: 50px auto;
+  @include media('<tablet'){
+    max-width: 345px;
+  }
 }
 .publisherName {
 }

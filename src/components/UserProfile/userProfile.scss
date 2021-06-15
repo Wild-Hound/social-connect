@@ -1,3 +1,4 @@
+@import '../Mixins/breakpoints.scss';
 .profileArea {
   position: relative;
 }
@@ -8,6 +9,11 @@
   background: aliceblue;
   padding: 25px;
   border-radius: 15px;
+  @include media('<tablet'){
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 .profileImg {
   min-width: 200px;

@@ -1,0 +1,35 @@
+.SGcommentWrapper {
+  background-color: #718093;
+  text-align: start;
+  padding: 1.5em;
+  border-radius: 5px;
+  color: white;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .SGmeta {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    cursor: pointer;
+    > div {
+      font-size: 1.15em;
+      font-weight: 500;
+    }
+    > img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+    }
+  }
+  .SGemail,
+  .SGdate {
+    margin: 0.5em;
+  }
+  .SGmessage {
+    background-color: #7f8fa6;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+  }
+}
