@@ -22,7 +22,7 @@ function PostMeta(props) {
 
   useEffect(() => {
     setLikeCount(likes);
-  }, []);
+  }, [likes]);
 
   function userProfile(e, profile) {
     history.push(`/profile/${profile}`);
@@ -36,11 +36,11 @@ function PostMeta(props) {
   return (
     <Card className="post">
       <CardHeader
-        avatar={<Avatar src={owner.picture}></Avatar>}
-        title={`${owner.firstName} ${owner.lastName}`}
+        avatar={<Avatar src={owner?.picture}></Avatar>}
+        title={`${owner?.firstName} ${owner?.lastName}`}
         subheader={publishDate}
         className="profileHeader"
-        onClick={(event) => userProfile(event, owner.id)}
+        onClick={(event) => userProfile(event, owner?.id)}
       />
       <CardMedia
         className="postImg"

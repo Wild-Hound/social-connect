@@ -25,8 +25,6 @@ function SingleComment(props) {
     return strDate;
   }
 
-  console.log(date.getDay());
-
   return (
     <div key={id} className="SGcommentWrapper">
       <Link to={`/profile/${owner.id}`}>
