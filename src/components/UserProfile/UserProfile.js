@@ -32,7 +32,6 @@ function UserProfile() {
 
     // loading users posts
     let urlposts = `https://dummyapi.io/data/api/user/${id}/post/`;
-    console.log(urlposts);
 
     fetch(urlposts, {
       headers: {
@@ -43,6 +42,7 @@ function UserProfile() {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         setUserPosts(data);
       });
   }, []);
