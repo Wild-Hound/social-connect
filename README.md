@@ -1,3 +1,7 @@
-## Bugs
+### Live Link: https://stupefied-austin-e0e7b9.netlify.app/
 
-there is bug with *like *share \*comment button at classlist toggle method
+#### Next Update:
+
+- store user likes & comments on local storage
+- create user profile with firebase login
+- add pagination
